@@ -1,0 +1,25 @@
+<%= form_for(@painel) do |f| %>
+  <% if @painel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@painel.errors.count, "error") %> prohibited this painel from being saved:</h2>
+
+      <ul>
+      <% @painel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome_app %><br>
+    <%= f.text_field :nome_app %>
+  </div>
+  <div class="field">
+    <%= f.label :tipo_evento %><br>
+    <%= f.text_field :tipo_evento %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

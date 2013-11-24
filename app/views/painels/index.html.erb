@@ -1,0 +1,29 @@
+<h1>Listing painels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome app</th>
+      <th>Tipo evento</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @painels.each do |painel| %>
+      <tr>
+        <td><%= painel.nome_app %></td>
+        <td><%= painel.tipo_evento %></td>
+        <td><%= link_to 'Show', painel %></td>
+        <td><%= link_to 'Edit', edit_painel_path(painel) %></td>
+        <td><%= link_to 'Destroy', painel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Painel', new_painel_path %>

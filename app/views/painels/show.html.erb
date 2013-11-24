@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome app:</strong>
+  <%= @painel.nome_app %>
+</p>
+
+<p>
+  <strong>Tipo evento:</strong>
+  <%= @painel.tipo_evento %>
+</p>
+
+<%= link_to 'Edit', edit_painel_path(@painel) %> |
+<%= link_to 'Back', painels_path %>
